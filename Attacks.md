@@ -8,14 +8,14 @@
 - if p and q are close t would be relatively very small
 - only work if and only if p and q are relatively too close  compared to n
 
-Let s = ( p + q) / 2  ( Note that s is close to √n)
-and t = ( p - q) / 2
-we know  n = p * q 
-then, n = (s + t) * (s - t)
-then, n =  s^2 - t^2
-then, t^2 = s^2 - n
-so t = √(s^2 - n)
-now we can get p and q 
-p = s + t
-q = s - t
+ Let s = ( p + q) / 2  ( Note that s is close to √n)
+ and t = ( p - q) / 2
+ we know  n = p * q 
+ then, n = (s + t) * (s - t)
+ then, n =  s^2 - t^2
+ then, t^2 = s^2 - n
+ so t = √(s^2 - n)
+ now we can get p and q 
+ p = s + t
+ q = s - t
 
