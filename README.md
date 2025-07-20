@@ -11,6 +11,8 @@
     -- john :
         $ john hashfile --mask=?1?1?1?1 --1=abcdef12345
             using custom caracterset to bruteforce with john
+        $ john --incremental=Digits hash
+            to bruteforce with only numbers
 
     -- encrypted zip file:
         brutefore with fcrackzip
