@@ -20,7 +20,7 @@
         or using john:
             $ zip2john encrypted.zip > hash
 
----------
+
 [ Forensics ] :
     
     -- dd image file forensics:
@@ -28,3 +28,10 @@
         fdisk -l file.dd  (to check partions info)
         dd if=disko-2.dd of=disk1.img bs=512 skip=2048 count=51200 (to create disk image that can be mounted)
          
+
+[ Networking ]:
+        
+    -- smbclient 
+        # smbclient -L ip_address (to list)
+        # smblient -L ip_address -N  (list with no password prompt login with guest or anonymous)
+        # smbclient //ip_address/shareName -N  (anonymous login to access pulic share)
