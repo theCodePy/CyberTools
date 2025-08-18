@@ -36,3 +36,19 @@ S3 Buckets:
 
 	The format of the S3 buckets is http(s)://{name}.s3.amazonaws.com where {name} is decided by the owner, such as tryhackme-assets.s3.amazonaws.com. S3 buckets can be discovered in many ways, such as finding the URLs in the website's page source, GitHub repositories, or even automating the process. One common automation method is by using the company name followed by common terms such as {name}-assets, {name}-www, {name}-public, {name}-private, etc.
 
+Subdomain Enumeration:
+
+	1. https://crt.sh offer a searchable database of certificates that shows current and historical results.
+	2. site:*.tryhackme.com -site:www.tryhackme.com -site:help.tryhackme.com -site:business.tryhackme.com
+	
+	DNS Bruteforce with dnsrecon:
+	3. dnsrecon -t brt -d acmeitsupport.thm -D wordlist.txt
+		-t std → Standard enumeration (basic DNS records like A, NS, MX, etc.)
+		-t brt → Bruteforce subdomains using a wordlist.
+		-t zonewalk → Zone transfer if the DNS server allows AXFR.
+		-t rvl → Reverse lookup of IP ranges.
+		-t axfr → Test for DNS zone transfer directly.
+		
+	OSINT - Sublister
+	4. ./sublist3r.py -d acmeitsupport.thm -o file.txt
+ 
