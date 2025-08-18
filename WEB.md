@@ -23,4 +23,16 @@
 		| `-fl` | **Filter by number of lines**                                          |
 		| `-mr` | **Match regex or string in body** (e.g., "Welcome", "Dashboard", etc.) |
 
-	
+
+favicon database to check frameworks:
+
+    https://wiki.owasp.org/index.php/OWASP_favicon_database
+
+Wappalyzer:
+
+	Wappalyzer (https://www.wappalyzer.com/) is an online tool and browser extension that helps identify what technologies a website uses, such as frameworks, Content Management Systems (CMS), payment processors and much more, and it can even find version numbers as well.
+
+S3 Buckets:
+
+	The format of the S3 buckets is http(s)://{name}.s3.amazonaws.com where {name} is decided by the owner, such as tryhackme-assets.s3.amazonaws.com. S3 buckets can be discovered in many ways, such as finding the URLs in the website's page source, GitHub repositories, or even automating the process. One common automation method is by using the company name followed by common terms such as {name}-assets, {name}-www, {name}-public, {name}-private, etc.
+
