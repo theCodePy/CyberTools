@@ -14,6 +14,8 @@
         $ john --incremental=Digits hash
             to bruteforce with only numbers
 
+    -- crackstation to crack hash: https://crackstation.net/
+
     -- encrypted zip file:
         brutefore with fcrackzip
             $ fcrackzip -b -u -v encrypted.zip
@@ -21,8 +23,8 @@
             $ zip2john encrypted.zip > hash
 
 
-[ Forensics ] :
-    
+[ Forensics ]:
+
     -- dd image file forensics:
         mmls file.dd (to check partitions info)
         fdisk -l file.dd  (to check partions info)
@@ -30,7 +32,7 @@
          
 
 [ Networking ]:
-        
+
     -- smbclient 
         # smbclient -L ip_address (to list)
         # smblient -L ip_address -N  (list with no password prompt login with guest or anonymous)
