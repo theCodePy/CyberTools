@@ -1,6 +1,6 @@
 # WEB APPLICATION PENETRATION TESTING.
 
-- ffuf (Fuzz Faster U Fool)
+-ffuf (Fuzz Faster U Fool)
 	-- # ffuf -u https://example.com/FUZZ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -mc 200,204,301,302,403 -t 100 -r
 		-mc (match only responses with status code.)
 		-u (target url where FUZZ keyword will be replaced with by each word)
@@ -10,7 +10,6 @@
 
 	-- # ffuf -u https://example.com/DIR -w /usr/share/wordlists/dirb/common.txt -mc 200 -p DIR
 		-p (use this keyword to replace p for placeholder)
-
 
 	-- # ffuf -u https://example.com/login.php?user=USER&pass=PASS -w users.txt:USER -w passwords.txt:PASS
 		if wants to use multiple placeholders they can be used like this.
@@ -22,6 +21,14 @@
 		| `-fw` | **Filter by number of words**                                          |
 		| `-fl` | **Filter by number of lines**                                          |
 		| `-mr` | **Match regex or string in body** (e.g., "Welcome", "Dashboard", etc.) |
+
+	Sub Domain Enumeration: fuzz the host
+		# ffuf -w /usr/share/wordlists/seclists/Discovery/DNS/namelist.txt -H "Host: FUZZ.acmeitsupport.thm" -u http://10.201.93.99 -fs 2395
+
+	use multiple -H to add multiple headers:
+		# ffuf -w wordlist.txt -H "Content-Type: application/xyz" -H "Host: FUZZ.acmeitsupport.thm" -u http://url/
+	post data:
+		# ffuf -w wordlist.txt -X POST -d "username=FUZZ&password=x" -mr "username already exists" -u http://example.com/
 
 
 favicon database to check frameworks:
@@ -48,7 +55,7 @@ Subdomain Enumeration:
 		-t zonewalk → Zone transfer if the DNS server allows AXFR.
 		-t rvl → Reverse lookup of IP ranges.
 		-t axfr → Test for DNS zone transfer directly.
-		
+
 	OSINT - Sublister
 	4. ./sublist3r.py -d acmeitsupport.thm -o file.txt
  
