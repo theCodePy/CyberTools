@@ -15,6 +15,8 @@
             to bruteforce with only numbers
 
     -- crackstation to crack hash: https://crackstation.net/
+    -- Hashes.com to crack hash: https://hashes.com/en/decrypt/hash
+    -- hashcat wiki: https://hashcat.net/wiki/doku.php?id=example_hashes
 
     -- encrypted zip file:
         brutefore with fcrackzip
