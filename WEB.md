@@ -59,3 +59,8 @@ Subdomain Enumeration:
 	OSINT - Sublister
 	4. ./sublist3r.py -d acmeitsupport.thm -o file.txt
  
+
+ XSS Attacks:
+
+ 	 XSS Hunter Express: https://github.com/mandatoryprogrammer/xsshunter-express
+ 	 
