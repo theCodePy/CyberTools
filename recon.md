@@ -20,3 +20,12 @@
 	DNSDumpster : https://dnsdumpster.com/
 
 	Shodan : https://www.shodan.io/
+
+
+
+[ SubDomain Enumeration]:
+	
+	SSL/TLS Certificates: https://crt.sh 
+
+	Sublister tool in kali
+	https://www.kali.org/tools/sublist3r/
