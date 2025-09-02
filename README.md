@@ -4,8 +4,13 @@
 
 [ Cyptography ]:
 	
-	-- substitution cipher solver : https://www.guballa.de/substitution-solver
+	-- substitution cipher solver : 
+        https://www.guballa.de/substitution-solver
+        https://quipqiup.com/
 		this website is awsome crack substitution in seconds.
+
+    -- Vigenère Solver:
+        https://www.guballa.de/vigenere-solver
     
 
     -- john :
