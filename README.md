@@ -74,10 +74,21 @@
         discovery:- Attempt to query running services for further information about the network (e.g. query an SNMP server).
         for more on nse see this link --> https://nmap.org/book/nse-usage.html
         # nmap -p 80 --script http-put --script-args http-put.url='/dav/shell.php',http-put.file='./shell.php'
-        #nmap --script-help <script-name> [script help]
+        # nmap --script-help <script-name> [script help]
         -f:- Used to fragment the packets (i.e. split them into smaller pieces) 
         --badsum:- this is used to generate in invalid checksum for packets.
         --scan-delay <time>ms:- used to add a delay between packets sent.
         --mtu <number>, accepts a maximum transmission unit size to use for the packets sent. This must be a multiple of 8.
         --data-length <num>: Append random data to sent packets
-    
+        # nmap -sn 10.1.1.0/24   (live host dicovery, no port scan)
+        # nmap -PR -sn 10.1.1.0/24   (live host dicovery, only ARP scan, no port scan)
+        # nmap -PE -sn 10.1.1.0/24   (live host dicovery, only ICMP Echo request scan, no port scan)
+        # nmap -PP -sn 10.1.1.0/24   (live host dicovery, only ICMP Timestamp request scan, no port scan)
+        # nmap -PM -sn 10.1.1.0/24   (live host dicovery, only ICMP address mask request scan, no port scan)
+        # nmap -PS -sn 10.1.1.0/24   (live host dicovery, TCP SYN ping, no port scan)
+            -PS21   (will target port 21)
+            -PS80,443,8080    (will target the three ports 80, 443, and 8080)
+            -PS21-25   (will target ports 21, 22, 23, 24, and 25)
+        # nmap -PA -sn 10.1.1.0/24   (live host dicovery, TCP ACK ping, no port scan)
+        # namp -PU -sn 10.1.1.0/24   (live host discovery, UDP ping)
+            if host is up this will respond with ICMP port unreachable for close ports (ICMP type 3 code 3),
