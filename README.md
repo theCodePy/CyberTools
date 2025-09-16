@@ -1,6 +1,16 @@
 # CyberTools, CTF tools list
 
 
+[Cheat Sheet]:
+
+    -- Reverse Shell Cheat Sheet: 
+        https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
+
+    -- Payload of all Thinkgs:
+        https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master
+       
+
+
 
 [ Cyptography ]:
 	
@@ -59,6 +69,7 @@
         TCP Null Scans (-sN)  [no flag is set]
         TCP FIN Scans (-sF)    [only FIN flag is set]
         TCP Xmas Scans (-sX)   [ FIN + PSH + URG flags are set]
+        TCP Xmas Scans (-sX)   [ FIN + PSH + URG flags are set]
         TCP stealth scan or "half-open" scan (-sS)  [doesn't complete 3 way handshake and send RST packet to the server]
         # nmap -sU --top-ports 20 <target_ip>    [send a top 20 most commonly used ports]
         # nmap -sn 192.168.0.1-254
@@ -92,3 +103,4 @@
         # nmap -PA -sn 10.1.1.0/24   (live host dicovery, TCP ACK ping, no port scan)
         # namp -PU -sn 10.1.1.0/24   (live host discovery, UDP ping)
             if host is up this will respond with ICMP port unreachable for close ports (ICMP type 3 code 3),
+        [MOST STEALTHIEST SCAN] : # sudo nmap -sS -f -T1 --source-port 53 -D 10.10.10.1,10.10.10.2,ME  target_ip
