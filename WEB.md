@@ -46,6 +46,7 @@ S3 Buckets:
 Subdomain Enumeration:
 
 	1. https://crt.sh offer a searchable database of certificates that shows current and historical results.
+	with the help of google dorking
 	2. site:*.tryhackme.com -site:www.tryhackme.com -site:help.tryhackme.com -site:business.tryhackme.com
 	
 	DNS Bruteforce with dnsrecon:
@@ -58,6 +59,9 @@ Subdomain Enumeration:
 
 	OSINT - Sublister
 	4. ./sublist3r.py -d acmeitsupport.thm -o file.txt
+
+	5. assetfinder very good tool.
+	https://github.com/tomnomnom/assetfinder
  
 
  XSS Attacks:
