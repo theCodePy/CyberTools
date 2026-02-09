@@ -15,6 +15,7 @@
 	-- (gdb) start    ( it will pause at the main function (or entry point))
 	-- (gdb) starti    ( to stop at the very first instruction )
 	-- (gdb) run (to run the programme)
+	-- (gdb) continue  (to continue run the program to the next breakpoint)
 	-- (gdb) next (to run next instruction of C)
 	-- (gdb) nexti (to execute next instruction of assambly)
 
@@ -24,6 +25,16 @@
 	-- (gdb) x/s 0x5555556010  (to see string array from an address)
 	-- (gdb) x/d 0x5555556010   (to see a decimal value at this address)
 	-- (gdb) x/22d 0x5555556010   (to see a decimal values of next 22 addresses from this address)
+	
+	analys registers
+	-- (gdb) info registers  (see all registers)
+	-- (gdb) print $rbp   (to print the value stored in register)
+	-- (gdb) info register $rbp   (to see any address stored in a register)
+	-- (gdb) x/s $rbp   (print the string of the address stored in the rbp)
+
+	change register values
+	-- (gdb) set $rbp = value   (to store values or addresses in a register)
+	-- (gdb) set $eflags |= (1<<6)   (change ZF flag to 1)
 
 	Pass arguments
 	You can simply provide the arguments directly after the run or start command.
